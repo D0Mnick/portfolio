@@ -12,13 +12,16 @@
 }
 
 .techh{
-  
     width: 100px;
     height: 100px;
- 
-    color: skyblue;
+    animation-name: style;
+    animation-duration: 5s;
 }
 
+@keyframes style {
+    from {background-color: white;}
+  to {background-color: grey;}
+}
 .tech{
     border-style: solid 2px;
     text-align: center;
