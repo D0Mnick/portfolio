@@ -1,0 +1,25 @@
+.skill{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.technology{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+}
+
+.techh{
+  
+    width: 100px;
+    height: 100px;
+ 
+    color: skyblue;
+}
+
+.tech{
+    border-style: solid 2px;
+    text-align: center;
+}
