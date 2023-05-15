@@ -15,7 +15,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="phone">
-                    <h4> <FaPhone  size={20} style={{color:"fff", marginRight:"2rem"}}/>09957657605</h4>
+                    <h4> <FaPhone  size={20} style={{color:"fff", marginRight:"2rem"}}/>09957657606</h4>
                 </div>
                 
                 <div className="email">
