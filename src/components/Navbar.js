@@ -1,54 +1,39 @@
-import React, {useState} from 'react';
-import "./NavbarStyle.css";
-import {Link} from 'react-router-dom';
-import {FaBars, FaTimes} from "react-icons/fa";
+import React from 'react'
+import logo from '../assets/VCash LOGO.png'
+import { Link } from 'react-scroll';
+import { TiThMenuOutline } from "react-icons/ti";
+import { FaTimes } from "react-icons/fa";
+import { useState } from 'react';
+import './hero.css'
 
+function Nav() {
+  const [nav, setNav] = useState(false)
 
-
-const Navbar = () => {
-  
-  const [click, setClick] = useState(false);
-  const handleClick = () => setClick (!click);
-
-  const [color, setColor] = useState(false);
-  const changeColor = () => {
-    if (window.scrollY >= 100){
-      setColor(true);
-    }else{
-      setColor(false);
-    }
-  }
-window.addEventListener("scroll", changeColor);
-
+  const handleNav = () => {
+    setNav(!nav)
+   }
   return (
-    <div className={color ? "header header-bg ":"header"}>
-      <Link to="/">
-        <h1>Portfolio.</h1>
-      </Link>
-      <ul className={click ? "nav-menu active" : "nav-menu"}>
-        <li>
-            <Link to="/">Home</Link>
-        </li>
+    <div  className='nav'>
+        <div className='navlogo'>
+          <Link to='hero' smooth={true} duration={500}> <img src={logo} alt="" /></Link>
+        <div id='navs'>
+            <ul  id='navmenu'  className={!nav ? '#navmenu active' : '#navmenu'}>
+            <li className='active'><Link to='hero' smooth={true} duration={500}>Home</Link></li>
+            <li> <Link to='about' smooth={true} duration={500}>About Us</Link></li>
+            <li> <Link to='services' smooth={true} duration={500}>Services</Link></li>
+            <li> <Link to='contact' smooth={true} duration={500}>Contact Us</Link></li>
+            </ul>
+        </div>
+            <div onClick={handleNav} className="navmobile">
 
-        <li>
-            <Link to="/project">Project</Link> 
-        </li>
+            {!nav ?  <FaTimes style={{color:'#17cf97', fontSize: '25px'}} /> : <TiThMenuOutline  style={{color:' #17cf97' , fontSize: '25px'}}/>}
 
-        <li>
-            <Link to="/about">About</Link>
-        </li>
 
-        <li>
-            <Link to="/contact">Contact</Link>
-        </li>
-      </ul>
-
-      <div className='hamburger' onClick={handleClick}>
-        {click ? (<FaTimes  size={20} style={{color:'#fff'}}/>) :
-        (<FaBars  size={20} style={{color:'#fff'}}/>)} 
-      </div>
+            
+            </div>
+        </div>
     </div>
   )
 }
 
-export default Navbar
+export default Nav

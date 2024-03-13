@@ -25,6 +25,14 @@ const ProjectCardData = [
         view:"https://shopping-list-seven-mauve.vercel.app/",
     },
 
+    {
+        imgsrc: pro3,
+        title:"Shopping List",
+        text:"Shop",
+        view:"https://shopping-list-seven-mauve.vercel.app/",
+    },
+
+
 ]
 
 export default ProjectCardData;

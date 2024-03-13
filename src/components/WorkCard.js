@@ -11,7 +11,7 @@ const WorkCard = (props) => {
                   <p>{props.text}</p>
                   <div className="pro-btn">
                     <NavLink to={props.view} className="btn-img">View</NavLink>
-                    <NavLink to="url.com" className="btn-img">Source</NavLink>
+                    {/* <NavLink to="url.com" className="btn-img">Source</NavLink> */}
                   </div>
                 </div>
             </div>
