@@ -1,0 +1,123 @@
+/* ✅ Fullscreen Background Mask / Overlay */
+.mask {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.mask::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+/* ✅ Background image */
+.into-img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* ✅ Hero Section */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+/* ✅ Centered Content */
+.hero .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+}
+
+.hero .content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.hero .content p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  letter-spacing: 2px;
+  color: #d1d1d1;
+}
+
+/* ✅ Button base styles */
+.btn,
+.btn-light {
+  text-decoration: none;
+  padding: 12px 34px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin: 0.5rem;
+  display: inline-block;
+  min-width: 150px;
+  text-align: center;
+}
+
+/* ✅ Primary Button (Projects) */
+.btn {
+  background-color: #17cf97;
+  color: #fff;
+  box-shadow: 0 3px 10px rgba(23, 207, 151, 0.3);
+}
+
+.btn:hover {
+  background-color: #13a779;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(23, 207, 151, 0.5);
+}
+
+/* ✅ Secondary Button (Contact) */
+.btn-light {
+  background: transparent;
+  border: 2.5px solid #17cf97;
+  color: #17cf97;
+  box-shadow: 0 3px 8px rgba(23, 207, 151, 0.25);
+}
+
+.btn-light:hover {
+  background-color: #17cf97;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(23, 207, 151, 0.45);
+}
+
+/* ✅ Responsive Fix */
+@media screen and (max-width: 768px) {
+  .hero .content h1 {
+    font-size: 2.3rem;
+  }
+
+  .hero .content p {
+    font-size: 1rem;
+  }
+
+  .btn,
+  .btn-light {
+    padding: 10px 26px;
+    font-size: 0.9rem;
+  }
+}
