@@ -1,37 +1,66 @@
-label{
-    color: #fff;    
-    margin-bottom: 0.5rem;
+label {
+  color: #fff;
+  margin-bottom: 0.5rem;
 }
 
-form{
-    display: flex;
-    flex-direction: column;
-    padding: 4rem 1rem;
-    margin: auto;
-    max-width: 600px;
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 1rem;
+  margin: auto;
+  max-width: 600px;
 }
 
-form input, form textarea{
-    margin-bottom: 1rem;
-    padding: 10px 18px;
-    font-size: 1.2rem;
-    background-color: rgba(225, 225, 225, 0.1);
-    border-color: rgba(225, 225, 225, 0.1);
-    color: #f4f4f4;
+form input,
+form textarea {
+  margin-bottom: 1rem;
+  padding: 10px 18px;
+  font-size: 1.2rem;
+  background-color: rgba(225, 225, 225, 0.1);
+  border-color: rgba(225, 225, 225, 0.1);
+  color: #f4f4f4;
 }
 
-
+/* Modern Submit Button */
+/* Submit Button Variant (same style, different color) */
 .btn-submit {
-     
-    background-color: #4CAF50; /* Green */
-    border-style: ridge;
-    color: white;
-    padding: 13px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 1px;
-    cursor: pointer;
-    text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  padding: 12px 34px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  margin: 0.5rem;
+  display: inline-block;
+  min-width: 150px;
+  text-align: center;
+
+  /* Different color */
+  background-color: #4caf50; /* green variant */
+  color: #fff;
+  box-shadow: 0 3px 10px rgba(76, 175, 80, 0.3); /* match green shadow */
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.btn-submit:hover {
+  background-color: #45a049; /* slightly darker green */
+  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Active / click effect */
+.btn-submit:active {
+  transform: translateY(1px);
+  box-shadow: 0 3px 8px rgba(76, 175, 80, 0.3);
+}
+
+/* Responsive for mobile */
+@media (max-width: 480px) {
+  .btn-submit {
+    min-width: 100%;
+    padding: 12px 0;
+  }
 }

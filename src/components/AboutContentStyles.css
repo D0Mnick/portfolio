@@ -1,77 +1,93 @@
-.btn-contact{
- 
-    background-color: #4CAF50; /* Green */
-    border-style: ridge;
-    color: white;
-    padding: 13px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    text-transform: uppercase;
-    width: 140px;
-  
+/* Clean Modern Button */
+.btn-contact {
+  text-decoration: none; /* important para walang underline */
+  border: none; /* walang ridge or border line */
+  padding: 12px 34px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  margin: 0.5rem;
+  display: inline-block;
+  min-width: 150px;
+  text-align: center;
 
+  /* Primary color & shadow */
+  background-color: #17cf97;
+  color: #fff;
+  box-shadow: 0 3px 10px rgba(23, 207, 151, 0.3);
+  transition: all 0.3s ease; /* smooth hover */
 }
 
-.btn-contact:hover{
-    background-color: grey;
+/* Hover effect */
+.btn-contact:hover {
+  background-color: #14b87a; /* darker green */
+  box-shadow: 0 5px 15px rgba(23, 207, 151, 0.4);
+  transform: translateY(-2px);
 }
 
-
-.about{
-    width: 100%;
-    margin: 3rem 0;
-    align-items: center;
-    justify-content: center;                    
-    flex-wrap: wrap;
-    height: 100%;
-    display: flex;
-
+/* Active / click effect */
+.btn-contact:active {
+  transform: translateY(1px);
+  box-shadow: 0 3px 8px rgba(23, 207, 151, 0.3);
 }
 
-.about .left{
-    text-align: center;
-    margin: auto;
-    padding: 1rem;
-    max-width: 350px;
+/* Responsive for mobile */
+@media (max-width: 480px) {
+  .btn-contact {
+    min-width: 100%; /* full width on mobile */
+    padding: 12px 0;
+  }
 }
 
-.about .left p{
-    margin: 1.2rem 0;
+.about {
+  width: 100%;
+  margin: 3rem 0;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 100%;
+  display: flex;
 }
 
-.about .right{
-    max-width: 700px;
+.about .left {
+  text-align: center;
+  margin: auto;
+  padding: 1rem;
+  max-width: 350px;
 }
 
-.right .img-container{
- display: grid;
- grid-template-columns: repeat(12, 1fr);
- position: relative;
- align-items: center;
- text-align: center;
+.about .left p {
+  margin: 1.2rem 0;
 }
 
-.right .img{
-    max-width: 90%;
-    border: 1px solid #333;
+.about .right {
+  max-width: 700px;
 }
 
-.right .top{
-    grid-column: 1 / span 8;
-    grid-row: 1;
-    padding-top:20% ;
-    z-index: 6;
+.right .img-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  position: relative;
+  align-items: center;
+  text-align: center;
 }
 
-.right .bottom{
-    grid-column: 4 / -1;
-    grid-row: 1;
-    z-index: 5;
+.right .img {
+  max-width: 90%;
+  border: 1px solid #333;
 }
 
+.right .top {
+  grid-column: 1 / span 8;
+  grid-row: 1;
+  padding-top: 20%;
+  z-index: 6;
+}
 
-
+.right .bottom {
+  grid-column: 4 / -1;
+  grid-row: 1;
+  z-index: 5;
+}
